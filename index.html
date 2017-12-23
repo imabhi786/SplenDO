@@ -1,0 +1,56 @@
+<html ng-app="Todoapp">
+    <head>
+        <title>ToDo app</title>
+        <script src="angular.js"></script>
+        <script src="todoapp.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu|Lato|Quicksand|Pacifico|Work Sans|Abel|Berkshire Swash" rel="stylesheet">
+        <link rel="icon" href="1.png">
+        
+    </head>
+
+
+    <body>
+        
+        <center><h1 class="header"><img src="2.jpg" height="50px" width="50px"><b>SplenDo App</b></h1></center>
+        <div ng-controller="todoctrl as c1">
+          <div class="r">
+              
+            <p >Add your work:</p>
+            <input type="text" ng-model="c1.input"></input><br><br>
+            <button ng-click="c1.add()">Add ToDO</button>
+          </div>
+          
+          <div class="p">
+                
+              <p style="color:red ;font-family:Lato">My List</p>
+              <hr width="500px"> 
+              <ul>
+                <li  ng-repeat="element in c1.todos  track by $index">
+                    <span ng-hide="c1.flagin">{{element}}</span>
+                    <input type="text" ng-show="c1.flagin" ng-model="element">
+                    <button ng-hide="c1.flagin" ng-click="c1.delete($index)" >Delete</button>
+                    
+                  </li>
+              </ul>
+              <button ng-hide="c1.flagin" ng-click="c1.update()">Edit</button>
+              <button ng-show="c1.flagin" ng-click="c1.update()">Done</button>
+              
+           
+          </div>
+          <div class="q">
+              <p style="color:red; font-family:Lato">Deleted List</p>
+              <hr width="500px"> 
+              
+              
+              <ul>
+                  <li ng-repeat="pop in c1.del  track by $index">
+                      {{pop}}
+                      <button ng-click="c1.againupdate($index)">Add</button>
+                  </li>
+              </ul>
+          </div>
+
+        </div>
+    </body>
+</html>

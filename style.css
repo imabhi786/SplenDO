@@ -1,0 +1,78 @@
+
+body{
+    background-color: rgb(176, 161, 184);
+
+}
+.header{
+    height: 60px;
+    width:100%;
+    padding:10px;
+    margin:0px;
+    padding: 5px;
+    font-family: 'Quicksand';
+    font-size:50px;
+
+}
+button{
+    height:40px;
+    min-width:100px;
+    color:rgb(190, 178, 178);
+    font-family: 'Quicksand';
+    font-size:20px;
+    background-color: rgb(54, 46, 46);
+}
+
+.p{
+    text-align: left;
+    float: left;
+    margin:10px;
+    font-size:30px;
+    color:rgb(221, 208, 209);
+    font-family:'Abel';
+    min-height:500px;
+    background-color: rgb(70, 70, 116);
+    padding: 20px;
+    border-radius:10px;
+
+
+    
+}
+.q{
+    text-align: left;
+    float: right;
+    margin:10px;
+    font-size:30px;
+    color:rgb(221, 208, 209);
+    font-family:'Abel';
+    min-height:500px;
+    background-color: rgb(70, 70, 116);
+    padding: 20px;
+    border-radius:10px;
+    
+
+    
+}
+.r{
+    text-align: center;
+    height:250px;
+    width:100%;
+    padding: 10px;
+    margin: 0px;
+    background-color: rgb(32, 31, 31);
+    color:whitesmoke;
+    font-size:30px;
+    font-family: 'Abel';
+}
+input{
+    height:40px;
+    width:500px;
+    border:0.2px black solid;
+    border-radius:3px;
+    font-size:25px;
+    font-family:'Abel';
+
+
+}
+input:hover{
+    border:2px rgb(139, 139, 185) solid;
+}
