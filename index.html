@@ -12,7 +12,14 @@
 
     <body>
         
-        <center><h1 class="header"><img src="2.jpg" height="50px" width="50px"><b>SplenDo App</b></h1></center>
+        <h1 class="header"><img src="2.jpg" height="50px" width="50px"><b>SplenDo App</b>
+            <div  class="time" ng-controller="Mainctrl as c2">
+                 <p>{{c2.currenttime}} {{c2.currentdate}}
+                
+                <button ng-click="c2.update()">Update</button></p>
+             </div>
+        </h1>    
+           
         <div ng-controller="todoctrl as c1">
           <div class="r">
               
@@ -35,6 +42,7 @@
               </ul>
               <button ng-hide="c1.flagin" ng-click="c1.update()">Edit</button>
               <button ng-show="c1.flagin" ng-click="c1.update()">Done</button>
+              <button ng-click="c1.save()">Save</button>
               
            
           </div>
@@ -47,6 +55,8 @@
                   <li ng-repeat="pop in c1.del  track by $index">
                       {{pop}}
                       <button ng-click="c1.againupdate($index)">Add</button>
+                      <button ng-hide="c1.flagin" ng-click="c1.delete1($index)" >Delete</button>
+                      
                   </li>
               </ul>
           </div>
